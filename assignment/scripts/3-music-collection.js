@@ -28,5 +28,22 @@ for (let album of collectionToDisplay) {
     console.log(`${album.title} by ${album.artist} published in ${album.yearPublished}`);
 }
 }
+//- Add a function named `findByArtist`. This function should:
+//- Take in `artist` (a string) parameter
+//- Create an array to hold any results, empty to start
+//- Loop through the `collection` and add any objects with a matching artist to the array.
+//- Return the array with the matching results. If no results are found, return an empty array.
 
+function findByArtist (artist) {
+let results = []
+for (let album of collection) {
+    if (album.artist === artist){
+    results.push(album)
+    }
+}
+return results
 
+}
+
+console.log(findByArtist("Mac Miller"));
+console.log(findByArtist("Taylor Swift"));
